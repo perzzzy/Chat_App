@@ -1,0 +1,140 @@
+#app {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+section:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+}
+
+section:last-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.user-message,
+.messages {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.user-message input[type="text"],
+.user-message textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#disconnected {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.messages ul {
+    list-style: none;
+    padding: 0;
+    max-height: 243px;
+    overflow-y: auto;
+}
+
+.chat-messages {
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.chat-messages:nth-child(odd) {
+    background-color: $user-messages;
+    color: #fff;
+}
+
+.chat-messages:nth-child(even) {
+    background-color: $other-messages;
+}
+
+.message-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.message-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.message-content {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.typing-status {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    animation: fadeOut 2s ease-in-out;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.timestamp {
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

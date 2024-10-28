@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Assignment #1, a live interactive chat application built with Node.js, Express, and Vue, enhanced with Socket.io. This project includes a feature to display notifications when a user leaves the chat. Please note that this is a basic chat app developed for desktop use as part of a school project. It may not include all the functionalities of a fully-featured live chat application.">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Chat</title>
+  </head>
+
+  <body>
+    <h1 class="hidden">Chat App</h1>
+    <header id="head">
+      <section class="logo-heading-nav">
+        <h2 class="hidden">Logo Heading and Nav</h2>
+        <div class="logo">
+          <img src="images/logo.svg" alt="Chat App logo" class="logo">
+        </div>
+        <div class="heading">
+          <h3 class="main-headline">Welcome to my Chat App</h3>
+        </div>
+        <nav class="main-navigation" aria-label="Main Navigation">
+          <ul>
+            <li><a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://twitter.com/"><img src="images/twitter.png" alt="Twitter"></a></li>
+            <li><a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main id="app">
+      <section class="user-message">
+        <h2>Input messages here:</h2>
+        <input id="nickname" v-model="nickname" type="text" placeholder="Nickname?">
+
+        <form>
+          <label for="message">Something to say?</label>
+          <textarea @focus="catchTextFocus" v-model="message" id="textarea" class="message"
+            autocomplete="off"></textarea>
+          <input @click.prevent="dispatchMessage" type="submit" value="Send">
+        </form>
+      </section>
+      <section class="messages">
+        <h2>Receive messages here:</h2>
+        <ul id="messages">
+          <!-- render a new message component for every message -->
+          <newmsg v-for="message in messages" :message="message"></newmsg>
+          <div class="typing-status">{{ userTypingStatus }}</div>
+        </ul>
+        <div id="disconnected" class="alert alert-danger" role="alert" style="display: none;">
+          <strong>Oops!</strong> Someone has disconnected from the chat.
+        </div>
+      </section>
+    </main>
+    <footer id="foot">
+      <section class="footer-content">
+        <h2 class="hidden">Footer Content</h2>
+        <div class="copyright">
+          <span class="copyright-text">&copy; 2023 Chat App</span>
+        </div>
+      </section>
+    </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/main.js" type="module" defer></script>
+  </body>
+
+</html>
