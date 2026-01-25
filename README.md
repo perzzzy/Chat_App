@@ -1,49 +1,91 @@
 # Chat App with Node, Express, and Vue
 
-Welcome to Assignment #1, a live interactive chat application built with Node.js, Express, and Vue, enhanced with Socket.io. This project includes a feature to display notifications when a user leaves the chat. Please note that this is a basic chat app, developed as part of a school project. It may not include all the functionalities of a fully-featured live chat application.
+This project is a live interactive chat application built with **Node.js**, **Express**, **Vue**, and **Socket.io**. It allows users to chat in real-time and includes a notification feature when a user leaves the chat.
+This is a basic chat app created as part of a school assignment and may not include all features of a production-level chat system.
 
-## Table of Contents
+**Technologies used:** Node.js, Express.js, Vue.js, Socket.io, JavaScript, HTML, CSS
 
-    Installation and Usage
-    License
+---
 
-## Installation and Usage
+## Installation and Running
 
-Follow these steps to install and run the application in your local environment:
+To use the chat application, follow these steps:
 
-Clone the repository:
+### Clone the repository
 
-bash
+Using SSH:
 
-    git clone <Perruzzi_G_ChatApp>
-    cd Perruzzi_G_ChatApp
+```bash
+git clone git@github.com:perzzzy/Chat_App.git
+```
+
+Using HTTPS:
+
+```bash
+git clone https://github.com/perzzzy/Chat_App.git
+```
+
+### Navigate to the project directory
+
+```bash
+cd Chat_App
+```
+
+### Or download as ZIP
+
+Go to the repository, click the green **Code** button, and select **Download ZIP**.
+
+---
 
 ## Install Dependencies
 
-Navigate to the project directory and install the necessary dependencies using npm or yarn.
+Navigate to the project directory and install the required dependencies:
 
-bash
+Using npm:
 
-    npm install
+```bash
+npm install
+```
 
-## or
+Or using yarn:
 
-    yarn install
+```bash
+yarn install
+```
 
-## Start the server
+---
 
-Run the Node.js server using the following command:
+## Start the Server
 
-bash
+Run the Node.js server with:
 
-    node app
+```bash
+node app
+```
 
-Access the Chat App:
+Then open your browser and go to:
 
-Open a web browser and navigate to <http://localhost:3000> to access the chat application. You can now start chatting with other users in real-time!
+```
+http://localhost:3000
+```
+
+The chat application will now be running locally.
+
+---
+
+## Usage
+
+1. Open the app in your browser at <http://localhost:3000>
+2. Start chatting with other users in real-time.
+3. Messages will appear instantly using Socket.io.
+4. A notification will appear when a user leaves the chat.
+
+---
 
 ## License
 
-This project is licensed under the MIT License, which means you are free to use, modify, and distribute the code as per the terms mentioned in the license.
+This project is licensed under the **MIT License**.
 
-Enjoy chatting with your friends and colleagues in real-time using this application!
+---
+
+Enjoy chatting in real-time with your friends and classmates! 💬🚀
